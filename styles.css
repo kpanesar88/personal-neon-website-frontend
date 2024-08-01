@@ -15,7 +15,7 @@
     --bg-color: #080808;
     --second-bg-color: #131313;
     --text-color: white;
-    --main-color: #e640e6;
+    --main-color: rgb(255, 247, 4);
 }
 
 html {
@@ -216,15 +216,15 @@ span {
 .text-animation {
     font-size: 34px;
     font-weight: 600;
-    min-width: 280px; /* Corrected to px */
+    min-width: 280px;    
 }
 
 .text-animation span {
     position: relative;
 }
 
-.text-animation span::before {
-    content: "Web Developer";
+.text-animation span::before{
+    content: "Engineering Student";
     color: var(--main-color);
     animation: words 20s infinite;
 }
@@ -236,43 +236,41 @@ span {
     width: calc(100% + 8px);
     height: 100%;
     border-left: 3px solid var(--bg-color);
+    right: -8px;
     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
 }
 
 @keyframes cursor {
-    0%,
-    100% {
+    to{
         border-left: 2px solid var(--main-color);
     }
 }
 
 @keyframes words {
     0%,
-    20%{
-        content: "Engineering Student";
-    }
     20% {
-        content: "Front-End Developer";
+        content: "Engineering Student";
     }
     21%,
     40% {
-        content: "Full-Stack Developer";
+        content: "Frontend Developer";
     }
     41%,
     60% {
-        content: "Engineering Student";
+        content: "FullStack Developer";
     }
     61%,
     80% {
-        content:"Front-End Developer";
+        content: "Software Engineer";
     }
     81%,
     100% {
-        content: "Full-Stack Developer";
+        content: "Hardware Engineer";
     }
 }
 
-@keyframes typing{
+@keyframes typing {
+    0%,
     10%,
     15%,
     30%,
@@ -282,7 +280,7 @@ span {
     70%,
     75%,
     90%,
-    95%{
+    95% {
         width: 0;
     }
     5%,
@@ -293,8 +291,7 @@ span {
     60%,
     65%,
     80%,
-    85%{
-        width:calc(100% + 8);
+    85% {
+        width: calc(100% + 8px);
     }
-
 }
